@@ -107,3 +107,14 @@ Installed dlib according to my instructions in this blog post.
 Have installed/upgraded imutils to the latest version, ensuring you have access to the face_utils submodule: pip install --upgrade imutils
 
 
+Now we have stored all the lips image from the given body images, so let's go on to designing a model.
+
+Using normalize_it, np_utils.to_categorical, shuffle to preprocess our data and split them to training and testing data.
+
+
+Now make a **sequential layer** using **Conv3D** and **maxpooling3D** and then after flatenning make it a **fully connected layer**.
+
+Then compile it with categorical_crossentropy loss, Adam optimizer and accuracy metrics.
+Then run it for 45 epochs
+
+# Here we are Done
