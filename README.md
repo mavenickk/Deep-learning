@@ -85,4 +85,25 @@ These mappings are encoded inside the FACIAL_LANDMARKS_IDXS dictionary inside <a
 
 A slightly harder task is to visualize each of these facial landmarks and overlay the results on an input image.
 
-To accomplish this, we’ll need the visualize_facial_landmarks function, already included in the imutils library:
+To accomplish this, we’ll need the visualize_facial_landmarks function, <a href="https://github.com/jrosebr1/imutils/blob/master/imutils/face_utils/helpers.py#L56">already included in the imutils library</a>:
+
+Our visualize_facial_landmarks function requires two arguments, followed by two optional ones, each detailed below:
+
+- image : The image that we are going to draw our facial landmark visualizations on.
+- shape : The NumPy array that contains the 68 facial landmark coordinates that map to various facial parts.
+- colors : A list of BGR tuples used to color-code each of the facial landmark regions.
+- alpha : A parameter used to control the opacity of the overlay on the original image.
+
+![image](https://user-images.githubusercontent.com/47064840/114576405-bb85c400-9c98-11eb-924d-ca0f63c4ea66.png)
+</br>
+</br>
+![image](https://user-images.githubusercontent.com/47064840/114576441-c5a7c280-9c98-11eb-8d6a-2396b0c57679.png)
+
+**Extracting parts of the face using dlib, OpenCV, and Python**
+
+Before you continue, make sure you have:
+
+Installed dlib according to my instructions in this blog post.
+Have installed/upgraded imutils to the latest version, ensuring you have access to the face_utils submodule: pip install --upgrade imutils
+
+
